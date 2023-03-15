@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { RadioGroup } from "@headlessui/react";
 import { CheckCircleIcon, TrashIcon } from "@heroicons/react/20/solid";
 import { processPayment } from "../services/payment";
@@ -8,47 +8,44 @@ import { toast } from "react-toastify";
 const products = [
   {
     id: 1,
-    title: "Basic Tee",
+    title: "Tour Tokyo",
     href: "#",
-    price: "$32.00",
-    color: "Black",
-    size: "Large",
-    imageSrc:
-      "https://tailwindui.com/img/ecommerce-images/checkout-page-02-product-01.jpg",
+    price: "$1000",
+    color: "",
+    size: "",
+    imageSrc: "/tokio.jfif",
     imageAlt: "Front of men's Basic Tee in black.",
   },
   // More products...
 ];
-const deliveryMethods = [
-  {
-    id: 1,
-    title: "Standard",
-    turnaround: "4–10 business days",
-    price: "$5.00",
-  },
-  { id: 2, title: "Express", turnaround: "2–5 business days", price: "$16.00" },
-];
-const paymentMethods = [
-  { id: "credit-card", title: "Credit card" },
-  { id: "paypal", title: "PayPal" },
-  { id: "etransfer", title: "eTransfer" },
-];
+
+const paymentMethods = [{ id: "credit-card", title: "Credit card" }];
+
+function randomTxIdString() {
+  return Math.random().toString(36).substr(2, 9);
+}
 
 export default function Example() {
-  const [selectedDeliveryMethod, setSelectedDeliveryMethod] = useState(
-    deliveryMethods[0]
-  );
+  const [txID, setTxID] = useState(randomTxIdString());
+  const [paymentInfo, setPaymentInfo] = useState({
+    amount: 1000,
+    cardHolderName: "Nguyen",
+    cardNumber: "4242424242424242",
+    expirationDate: "12/29",
+    cvc: "123",
+    txId: txID,
+    cardType: "visa",
+  });
 
-  const handlePayment = async () => {
-    const res = await axios.post("/api/payment", {
-      amount: 100,
-      cardHolderName: "John Doe",
-      cardNumber: "4242424242424242",
-      expirationDate: "12/24",
-      cvv: "123",
-      txId: "123456",
-      cardType: "visa",
+  const handleChange = (key, value) => {
+    setPaymentInfo({
+      ...paymentInfo,
+      [key]: value,
     });
+  };
+
+  const handlePayment = useCallback(async () => {
+    const res = await axios.post("/api/payment", paymentInfo);
     if (res.data) {
       if (
         res.data["S:Envelope"]["S:Body"]["ns2:processPaymentResponse"][
@@ -64,7 +61,7 @@ export default function Example() {
         });
       }
     }
-  };
+  }, [paymentInfo]);
 
   return (
     <div className="bg-gray-50">
@@ -74,7 +71,21 @@ export default function Example() {
         <div className="lg:grid lg:grid-cols-2 lg:gap-x-12 xl:gap-x-16">
           <div>
             <div>
-              <h2 className="text-lg font-medium text-gray-900">
+              <h2 className="text-lg font-medium text-gray-900">TxId</h2>
+
+              <div className="mt-4">
+                <div className="mt-1">
+                  <input
+                    disabled={true}
+                    value={txID}
+                    type="text"
+                    className="block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
+                  />
+                </div>
+              </div>
+            </div>
+            {/* <div>
+              <h2 className="text-lg font-medium text-gray-900 mt-5">
                 Contact information
               </h2>
 
@@ -284,7 +295,7 @@ export default function Example() {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Payment */}
             <div className="mt-10 border-t border-gray-200 pt-10">
@@ -333,6 +344,10 @@ export default function Example() {
                   </label>
                   <div className="mt-1">
                     <input
+                      value={paymentInfo.cardNumber}
+                      onChange={(e) =>
+                        handleChange("cardNumber", e.target.value)
+                      }
                       type="text"
                       id="card-number"
                       name="card-number"
@@ -351,6 +366,10 @@ export default function Example() {
                   </label>
                   <div className="mt-1">
                     <input
+                      value={paymentInfo.cardHolderName}
+                      onChange={(e) =>
+                        handleChange("cardHolderName", e.target.value)
+                      }
                       type="text"
                       id="name-on-card"
                       name="name-on-card"
@@ -369,6 +388,10 @@ export default function Example() {
                   </label>
                   <div className="mt-1">
                     <input
+                      value={paymentInfo.expirationDate}
+                      onChange={(e) =>
+                        handleChange("expirationDate", e.target.value)
+                      }
                       type="text"
                       name="expiration-date"
                       id="expiration-date"
@@ -387,6 +410,8 @@ export default function Example() {
                   </label>
                   <div className="mt-1">
                     <input
+                      value={paymentInfo.cvc}
+                      onChange={(e) => handleChange("cvc", e.target.value)}
                       type="text"
                       name="cvc"
                       id="cvc"
@@ -478,21 +503,19 @@ export default function Example() {
               <dl className="space-y-6 border-t border-gray-200 py-6 px-4 sm:px-6">
                 <div className="flex items-center justify-between">
                   <dt className="text-sm">Subtotal</dt>
-                  <dd className="text-sm font-medium text-gray-900">$64.00</dd>
+                  <dd className="text-sm font-medium text-gray-900">$1000</dd>
                 </div>
                 <div className="flex items-center justify-between">
                   <dt className="text-sm">Shipping</dt>
-                  <dd className="text-sm font-medium text-gray-900">$5.00</dd>
+                  <dd className="text-sm font-medium text-gray-900">$0</dd>
                 </div>
                 <div className="flex items-center justify-between">
                   <dt className="text-sm">Taxes</dt>
-                  <dd className="text-sm font-medium text-gray-900">$5.52</dd>
+                  <dd className="text-sm font-medium text-gray-900">$10</dd>
                 </div>
                 <div className="flex items-center justify-between border-t border-gray-200 pt-6">
                   <dt className="text-base font-medium">Total</dt>
-                  <dd className="text-base font-medium text-gray-900">
-                    $75.52
-                  </dd>
+                  <dd className="text-base font-medium text-gray-900">$1010</dd>
                 </div>
               </dl>
 

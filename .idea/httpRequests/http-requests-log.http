@@ -1,0 +1,234 @@
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:processPayment>
+         <paymentInfo>
+            <cardHolderName>Nguyen</cardHolderName>
+         </paymentInfo>
+      </ser:processPayment>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<> 2023-03-12T164545.200.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:sayHello>
+         <name>sdcsdc</name>
+      </ser:sayHello>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<> 2023-03-10T125752.200.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:sayHello>
+         <name>sdcsdc</name>
+      </ser:sayHello>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<> 2023-03-10T125742.200.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:sayHello>
+         <arg0>?</arg0>
+      </ser:sayHello>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<> 2023-03-10T125712.200.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:processPayment>
+         <paymentInfo>
+<cardHolderName>Nguyen</cardHolderName>
+         </paymentInfo>
+      </ser:processPayment>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<> 2023-03-10T125313.200.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:processPayment>
+         <paymentInfo>
+<cardHolderName>Nguyen</cardHolderName>
+         </paymentInfo>
+      </ser:processPayment>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<> 2023-03-10T125310.200.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:processPayment>
+         <paymentInfo>
+
+         </paymentInfo>
+      </ser:processPayment>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<> 2023-03-10T125227.200.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:processPayment>
+         <paymentInfo>
+
+         </paymentInfo>
+      </ser:processPayment>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<> 2023-03-10T125216.200.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:processPayment>
+         <paymentInfo/>
+      </ser:processPayment>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<> 2023-03-10T125147.200.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:processPayment>
+         <paymentInfo>
+      </ser:processPayment>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<> 2023-03-10T125145.500.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:processPayment>
+         <paymentInfo>
+      </ser:processPayment>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<> 2023-03-10T125138.500.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <ser:sayHello>
+         <arg0>?</arg0>
+      </ser:sayHello>
+   </soapenv:Body>
+</soapenv:Envelope>
+
+<> 2023-03-10T125003.200.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <sayHello>
+            <arg0>string</arg0>
+        </sayHello>
+    </soap:Body>
+</soap:Envelope>
+
+<> 2023-03-10T124925.500.xml
+
+###
+
+POST http://localhost:5000/mywebservice
+Content-Type: text/xml, charset=utf-8
+
+<?xml version="1.0" encoding="utf-8"?>
+<soap:Envelope xmlns:soap="http://schemas.xmlsoap.org/soap/envelope/">
+    <soap:Body>
+        <sayHello>
+            <arg0>string</arg0>
+        </sayHello>
+    </soap:Body>
+</soap:Envelope>
+
+<> 2023-03-10T124913.500.xml
+
+###
+

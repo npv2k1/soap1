@@ -6,9 +6,6 @@ type Data = {
   name: string;
 };
 
-var data =
-  '<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:ser="http://services/">\n   <soapenv:Header/>\n   <soapenv:Body>\n      <ser:processPayment>\n         <paymentInfo>\n            <cardHolderName>Nguyen</cardHolderName>\n         </paymentInfo>\n      </ser:processPayment>\n   </soapenv:Body>\n</soapenv:Envelope>';
-
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
@@ -27,7 +24,7 @@ export default async function handler(
          <cardHolderName>${body.cardHolderName}</cardHolderName>
          <cardType>${body.cardType}</cardType>
          <cardNumber>${body.cardNumber}</cardNumber>
-         <cvv>${body.cvv}</cvv>
+         <cvc>${body.cvc}</cvc>
          <expirationDate>${body.expirationDate}</expirationDate>
          <amount>${body.amount}</amount>
          <txId>${body.txId}</txId>
