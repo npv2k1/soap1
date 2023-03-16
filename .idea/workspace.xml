@@ -5,17 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b0891307-38d8-4f91-b71d-a326187463cb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/DAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/dao/PaymentDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/models/Payment.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/dao/ProductDAO.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/models/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/ProductMain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/services/ProductService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/pages/api/product.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/webapp/src/pages/product.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/dtos/PaymentInfo.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/services/PaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/services/PaymentService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/pages/api/payment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/pages/api/payment.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/webapp/src/pages/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/webapp/src/pages/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,15 +51,29 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "11",
+    "last_opened_file_path": "C:/Users/nguyen/Downloads/Nhom_5_bai_2/OrderService",
     "nodejs_package_manager_path": "npm",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "D:\\gitrepo\\ktltweb\\soap1\\web\\node_modules\\typescript\\lib"
+    "ts.external.directory.path": "D:\\gitrepo\\ktltweb\\soap1\\webapp\\node_modules\\typescript\\lib"
   }
 }]]></component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="Application.ProductMain">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
+      <module name="soap1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.example.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductMain" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.example.ProductMain" />
       <module name="soap1" />
       <extension name="coverage">
         <pattern>
@@ -81,6 +93,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ProductMain" />
         <item itemvalue="Application.Main" />
         <item itemvalue="HTTP Request.hello | #1" />
         <item itemvalue="HTTP Request.hello | #2" />
@@ -102,7 +115,13 @@
       <workItem from="1678612010873" duration="5346000" />
       <workItem from="1678714437376" duration="1453000" />
       <workItem from="1678806781467" duration="16000" />
-      <workItem from="1678858866907" duration="4811000" />
+      <workItem from="1678858866907" duration="5559000" />
+      <workItem from="1678892736693" duration="45000" />
+      <workItem from="1678893091408" duration="6000" />
+      <workItem from="1678963205059" duration="17000" />
+      <workItem from="1678963234134" duration="9000" />
+      <workItem from="1678963488461" duration="464000" />
+      <workItem from="1678963989005" duration="4903000" />
     </task>
     <servers />
   </component>
